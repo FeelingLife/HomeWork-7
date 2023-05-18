@@ -7,27 +7,36 @@ int MethodFillingArray(int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            array[m, n] = new Random().Next(-10, 11);
-            Console.Write(array[m, n] + " ");
+            array[i, j] = new Random().Next(-10, 11);
+            Console.Write(array[i, j] + " ");
         }
         return n;
     }
     return m;
 }
-MethodFillingArray(2, 5);
+MethodFillingArray(5, 5);
 
-// void MethodPrintArray(string message)
+// Console.Write("Введите количество строк массива: ");
+// int rows = int.Parse(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns = int.Parse(Console.ReadLine());
+
+// int[,] array = new int[rows, columns];
+
+// for (int i = 0; i < rows; i++)
 // {
-//     int[,] array = new int[m, n];
-//     for (int i = 0; i < array.GetLength(0); i++)
+//     for (int j = 0; j < columns; j++)
 //     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             Console.Write($"{array[m, n]} ");
-//         }
-//         Console.WriteLine();
+//         array[i, j] = new Random().Next(-10, 10 + 1);
 //     }
 // }
 
-
-// MethodPrintArray("Так выглядит массив: ");
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         Console.Write($"{array[i, j]} ");
+//     }
+//     Console.WriteLine();
+// }

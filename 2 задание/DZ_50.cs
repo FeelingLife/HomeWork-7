@@ -9,22 +9,23 @@ int[,] CreatArray(int rows, int columns) //Создаем массив с вып
     Console.Write("Введите искомое число: ");
     int finder = int.Parse(Console.ReadLine());
     int[,] array = new int[rows, columns];
-    int q = 0; // счетчик
+    int counter = 0; // счетчик
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
-            array[i, j] = new Random().Next(0, 21);
+            array[i, j] = new Random().Next(0, 20);
             if (finder == array[i, j])
             {
                 Console.WriteLine();
-                Console.WriteLine($"Индексы числа в двумерном массиве: ({i + 1},{j + 1}) ");
-                q++;
+                Console.WriteLine($"Индексы числа в двумерном массиве: ({i + 1},{j + 1}) "); // +1 добавил чтоб было удобно читать пользователю
+                counter++;
             }
         }
     }
-    if (q == 0)
+    if (counter == 0)
     {
+        Console.WriteLine();
         Console.WriteLine($"{finder} - такого числа в масссиве нет");
     }
     return array;
@@ -41,9 +42,9 @@ void PrintArray(int[,] array) //создаем вывод массива на э
     }
 
 }
-int[,] massive = CreatArray(5, 5);
+int[,] array = CreatArray(5, 5); // задаем размерность массива
 Console.WriteLine();
-PrintArray(massive);
+PrintArray(array); //выводим массив
 Console.WriteLine();
 
 // Код без методов
@@ -61,7 +62,7 @@ Console.WriteLine();
 // Console.WriteLine();
 
 // int[,] array = new int[rows, columns];
-// int q = 0;
+// int counter = 0;
 
 // for (int i = 0; i < rows; i++)
 // {
@@ -71,11 +72,11 @@ Console.WriteLine();
 //         if (finder == array[i, j])
 //         {
 //             Console.WriteLine($"Индексы числа в двумерном массиве: ({i+1},{j+1}) ");
-//             q++;
+//             counter++;
 //         }
 //     }
 // }
-// if (q == 0)
+// if (counter == 0)
 // {
 //     Console.WriteLine($"{finder} - такого числа в масссиве нет");
 // }

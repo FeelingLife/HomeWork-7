@@ -2,10 +2,10 @@
 
 // Код при помощи методов методов
 
-int[,] CreatArray(int rows, int columns) //Создаем массив с выполненной задачей
+int[,] CreatArray(int rows, int columns) // Создаем массив с выполненной задачей
 {
-    Console.WriteLine("Количество строк массива: " + rows + " " );
-    Console.WriteLine("Количество столбцов массива: " + columns + " " );
+    Console.WriteLine("Количество строк массива: " + rows + " ");
+    Console.WriteLine("Количество столбцов массива: " + columns + " ");
     Console.Write("Введите искомое число: ");
     int finder = int.Parse(Console.ReadLine());
     int[,] array = new int[rows, columns];
@@ -30,7 +30,7 @@ int[,] CreatArray(int rows, int columns) //Создаем массив с вып
     }
     return array;
 }
-void PrintArray(int[,] array) //создаем вывод массива на экран
+void PrintArray(int[,] array) // Создаем вывод массива на экран
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -42,9 +42,9 @@ void PrintArray(int[,] array) //создаем вывод массива на э
     }
 
 }
-int[,] array = CreatArray(5, 5); // задаем размерность массива
+int[,] array = CreatArray(5, 5); // Задаем размерность массива
 Console.WriteLine();
-PrintArray(array); //выводим массив
+PrintArray(array); // Выводим массив
 Console.WriteLine();
 
 // Код без методов
